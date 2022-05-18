@@ -1,2 +1,2 @@
-# vck190_microblaze_hw
+# vck190_hw
 Example platform using microblaze processors. 
