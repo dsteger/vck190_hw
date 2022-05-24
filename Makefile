@@ -25,6 +25,8 @@ ndt:
 			$(CONFIG_TCL)
 --p0:
 	sed -i '/set platform/c\set platform_index 0' $(ROOTDIR)/config.tcl
+--p1:
+	sed -i '/set platform/c\set platform_index 1' $(ROOTDIR)/config.tcl
 
 --vivado:
 	mkdir -p $(HW_BUILD_PATH)
@@ -36,6 +38,7 @@ ndt:
 			$(CONFIG_TCL)
 
 platform0: --p0 --vivado
+platform1: --p1 --vivado
 
 clean:
 	rm -rf $(BUILD_DIR)
