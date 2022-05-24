@@ -61,10 +61,10 @@ set_property platform.version ${version} [current_project]
 set_property pfm_name ${proj_name} [get_files -all ${proj_name}.bd]
 
 if { $artifacts eq "True" } {
-    launch_runs synth_1 -jobs 8
+    launch_runs synth_1 -jobs 6
     wait_on_run synth_1
 
-    launch_runs impl_1 -to_step write_device_image -jobs 8
+    launch_runs impl_1 -to_step write_device_image -jobs 6
     wait_on_run impl_1
     open_run impl_1
 
